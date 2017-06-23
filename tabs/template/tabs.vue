@@ -50,14 +50,14 @@ import { Lazyload } from 'mint-ui'
 
 Vue.use(Lazyload)
 export default {
-  components: {{{#if_eq downloadPrompte true}}
+  components: { {{#if_eq downloadPrompte true}}
     LoadBanner,{{/if_eq}}
     fixedTabs,
     navItem,
     productList,
   },
   data() {
-    return {{{#if_eq downloadPrompte true}}
+    return { {{#if_eq downloadPrompte true}}
       isApp: appbridge.isApp,{{/if_eq}}
       navs: [
         {
