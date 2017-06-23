@@ -40,8 +40,8 @@
   </div>
 </template>
 <script>
-import Vue from 'vue'
-{{#if_eq downloadPrompte true}}import LoadBanner from '@/components/LoadBanner'{{/if_eq}}
+import Vue from 'vue'{{#if_eq downloadPrompte true}}
+import LoadBanner from '@/components/LoadBanner'{{/if_eq}}
 import { fixedTabs, navItem } from '@/components/fixed-tabs'
 import productList from '@/components/product-list'
 import {{#if_eq downloadPrompte true}}appbridge{{/if_eq}}, { openDetail } from '@/assets/libs/appbridge'
@@ -50,15 +50,15 @@ import { Lazyload } from 'mint-ui'
 
 Vue.use(Lazyload)
 export default {
-  components: {
-    {{#if_eq downloadPrompte true}}LoadBanner,{{/if_eq}}
+  components: {{{#if_eq downloadPrompte true}}
+    LoadBanner,{{/if_eq}}
     fixedTabs,
     navItem,
     productList,
   },
   data() {
-    return {
-      isApp: appbridge.isApp,
+    return {{{#if_eq downloadPrompte true}}
+      isApp: appbridge.isApp,{{/if_eq}}
       navs: [
         {
           text: '项目1',
