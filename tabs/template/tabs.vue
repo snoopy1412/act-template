@@ -35,8 +35,8 @@
             </product-list>
         </div>
       </template>
-    </fixed-tabs>
-    {{#if_eq downloadPrompte true}}<load-banner v-if='!isApp'></load-banner>{{/if_eq}}
+    </fixed-tabs>{{#if_eq downloadPrompte true}}
+    <load-banner v-if='!isApp'></load-banner>{{/if_eq}}
   </div>
 </template>
 <script>
