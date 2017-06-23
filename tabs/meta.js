@@ -3,7 +3,8 @@ module.exports = {
     "name": {
       "type": "string",
       "required": true,
-      "message": "Act file name"
+      "message": "Act file name",
+      "default": "demo name"
     },
     "description": {
       "type": "string",
