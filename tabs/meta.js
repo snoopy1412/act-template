@@ -1,13 +1,13 @@
 module.exports = {
   "prompts": {
     "name": {
-      "type": "string",
+      "type": "input",
       "required": true,
       "message": "Act file name",
       "default": "demo name"
     },
     "description": {
-      "type": "string",
+      "type": "input",
       "required": false,
       "message": "Project description",
       "default": "A act page template"
