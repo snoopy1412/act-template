@@ -8,7 +8,7 @@
       <template slot="navs">
         <div class="navs-box-inner">
           <nav-item v-for="(tab,index) in navs" :key="index" :default-index='index'>
-            <span>{{ tab.text }}</span>
+            <span v-text='tab.text'></span>
           </nav-item>
         </div>
       </template>
@@ -24,9 +24,9 @@
                       </div>
                     </div>
                     <div class="detail" style='text-align:center'>
-                        <h3 class='two-line-overflow'>{{p.title}}</h3>
+                        <h3 class='two-line-overflow' v-text='p.title'></h3>
                         <div>
-                          <span><span>￥</span> <span>{{p.price}}</span></span>
+                          <span><span>￥</span> <span v-text='p.price'></span></span>
                           <a href="" class='btn'>立即购买</a>
                         </div>
                     </div>
@@ -68,7 +68,7 @@ export default {
           text: '项目1',
         },
         {
-          text: '项目1',
+          text: '项目2',
         },
         {
           text: '项目3',
