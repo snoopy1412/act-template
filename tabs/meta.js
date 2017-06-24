@@ -1,6 +1,6 @@
 module.exports = {
   "prompts": {
-    "name": {
+    "name1": {
       "type": "input",
       "required": false,
       "message": "Act file name",
