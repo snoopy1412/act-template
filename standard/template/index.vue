@@ -9,7 +9,9 @@
   </div>
 </template>
 <script>
-import LoadBanner from '@/components/LoadBanner'{{/if_eq}}
+{{#if_eq downloadPrompte true}}
+import LoadBanner from '@/components/LoadBanner'
+{{/if_eq}}
 import {{#if_eq downloadPrompte true}}appbridge{{/if_eq}}, { openDetail } from '@/assets/libs/appbridge'
 import { h5Domain } from 'assets/libs/domain'
 
