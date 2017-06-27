@@ -3,7 +3,9 @@
     <header style='background:#ff4e00;color:#fff;height:100px;line-height:100px;text-align:center'>
       标准模板
     </header>
-    <load-banner v-if='!isApp'></load-banner>{{/if_eq}}
+    {{#if_eq downloadPrompte true}}
+    <load-banner v-if='!isApp'></load-banner>
+    {{/if_eq}}
   </div>
 </template>
 <script>
