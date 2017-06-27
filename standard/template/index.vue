@@ -19,6 +19,7 @@ export default {
   components: {
     {{#if_eq downloadPrompte true}}
     LoadBanner,
+    {{/if_eq}}
   },
   data() {
     return {
