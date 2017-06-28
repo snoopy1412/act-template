@@ -35,8 +35,14 @@
             </product-list>
         </div>
       </template>
-    </fixed-tabs>{{#if_eq downloadPrompte true}}
-    <load-banner v-if='!isApp'></load-banner>{{/if_eq}}
+    </fixed-tabs>
+    {{#if_eq downloadPrompte true}}
+    <!-- 用于非App环境下，load-banner组件的占位 -->
+    <transition name="fold">
+      <div class='fold' v-if='!isApp && hideLoadBanner'></div>
+    </transition>
+    <load-banner v-if='!isApp' @closeBanner='closeBanner'></load-banner>
+    {{/if_eq}}
   </div>
 </template>
 <script>
@@ -62,6 +68,7 @@ export default {
     return {
       {{#if_eq downloadPrompte true}}
       isApp: appbridge.isApp,
+      hideLoadBanner: !this.isApp ? 1 : 0,
       {{/if_eq}}
       navs: [
         {
@@ -116,6 +123,11 @@ export default {
   },
   methods: {
     openDetail,
+    {{#if_eq downloadPrompte true}}
+    closeBanner() {
+      this.hideLoadBanner = 0
+    },
+    {{/if_eq}}    
   },
   mounted() {
     this.$setDocumentTitle(this.shareText.title)
