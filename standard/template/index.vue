@@ -16,7 +16,7 @@
 {{#if_eq downloadPrompte true}}
 import LoadBanner from '@/components/LoadBanner'
 {{/if_eq}}
-import {{#if_eq downloadPrompte true}}appbridge{{/if_eq}}, { openDetail } from '@/assets/libs/appbridge'
+import {{{#if_eq downloadPrompte true}}isApp{{/if_eq}}, openDetail } from '@/assets/libs/appbridge'
 import { h5Domain } from 'assets/libs/domain'
 
 export default {
@@ -28,7 +28,7 @@ export default {
   data() {
     return {
       {{#if_eq downloadPrompte true}}
-      isApp: appbridge.isApp,
+      isApp,
       hideLoadBanner: !this.isApp ? 1 : 0,
       {{/if_eq}}
       baseShareImg: 'https://file.xwowmall.com/front-assets/images/mallCommon/mall-logo.png', // 分享图片
