@@ -50,7 +50,7 @@ import Vue from 'vue'{{#if_eq downloadPrompte true}}
 import LoadBanner from '@/components/LoadBanner'{{/if_eq}}
 import { fixedTabs, navItem } from '@/components/fixed-tabs'
 import productList from '@/components/product-list'
-import {{{#if_eq downloadPrompte true}}isApp{{/if_eq}}, openDetail } from '@/assets/libs/appbridge'
+import { {{#if_eq downloadPrompte true}}isApp{{/if_eq}}, openDetail } from '@/assets/libs/appbridge'
 import { h5Domain } from 'assets/libs/domain'
 import { Lazyload } from 'mint-ui'
 
