@@ -158,4 +158,14 @@ export default {
       }
     }
   }
+  .fold{
+    width: 100%;
+    height: 88px;
+  }
+  .fold-enter-active, .fold-leave-active {
+    transition: all .5s;
+  }
+  .fold-enter, .fold-leave-to /* .fade-leave-active in below version 2.1.8 */ {
+    height: 0;
+  }
 </style>
