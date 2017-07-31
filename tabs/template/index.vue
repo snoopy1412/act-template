@@ -70,7 +70,7 @@ export default {
     return {
       {{#if_eq downloadPrompte true}}
       isApp,
-      hideLoadBanner: !this.isApp ? 1 : 0,
+      hideLoadBanner: 'isApp' in window ? 0 : 1,
       {{/if_eq}}
       navs: [
         {

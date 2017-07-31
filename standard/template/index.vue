@@ -31,7 +31,7 @@ export default {
     return {
       {{#if_eq downloadPrompte true}}
       isApp,
-      hideLoadBanner: !this.isApp ? 1 : 0,
+      hideLoadBanner: 'isApp' in window ? 0 : 1,
       {{/if_eq}}
       shareText: { // 分享内容
         title: '页面标题',
