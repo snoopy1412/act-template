@@ -19,6 +19,8 @@ import LoadBanner from '@/components/LoadBanner'
 import { {{#if_eq downloadPrompte true}}isApp{{/if_eq}}, openDetail } from '@/assets/libs/appbridge'
 import { h5Domain } from 'assets/libs/domain'
 
+const baseShareImg = 'https://file.xwowmall.com/front-assets/images/mallCommon/mall-logo.png' // 分享图片
+const baseShareLink = '' // 分享链接
 export default {
   components: {
     {{#if_eq downloadPrompte true}}
@@ -31,14 +33,12 @@ export default {
       isApp,
       hideLoadBanner: !this.isApp ? 1 : 0,
       {{/if_eq}}
-      baseShareImg: 'https://file.xwowmall.com/front-assets/images/mallCommon/mall-logo.png', // 分享图片
-      baseShareLink: '', // 分享链接
       shareText: { // 分享内容
         title: '页面标题',
         shareTitle: '分享主标题',
         shareSubTitle: '分享副标题',
-        shareImg: this.baseShareImg,
-        shareLink: `${h5Domain}/act/m/${this.baseShareLink}&source=act`,
+        shareImg: baseShareImg,
+        shareLink: baseShareLink,
       },
     }
   },

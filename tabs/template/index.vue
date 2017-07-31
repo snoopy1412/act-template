@@ -54,6 +54,8 @@ import { {{#if_eq downloadPrompte true}}isApp{{/if_eq}}, openDetail } from '@/as
 import { h5Domain } from 'assets/libs/domain'
 import { Lazyload } from 'mint-ui'
 
+const baseShareImg = 'https://file.xwowmall.com/front-assets/images/mallCommon/mall-logo.png' // 分享图片
+const baseShareLink = '' // 分享链接
 Vue.use(Lazyload)
 export default {
   components: {
@@ -110,14 +112,12 @@ export default {
           ],
         },
       ],
-      baseShareImg: 'https://file.xwowmall.com/front-assets/images/mallCommon/mall-logo.png', // 分享图片
-      baseShareLink: '', // 分享链接
       shareText: { // 分享内容
         title: '页面标题',
         shareTitle: '分享主标题',
         shareSubTitle: '分享副标题',
-        shareImg: this.baseShareImg,
-        shareLink: `${h5Domain}/act/m/${this.baseShareLink}&source=act`,
+        shareImg: baseShareImg,
+        shareLink: baseShareLink,
       },
     }
   },
