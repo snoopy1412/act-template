@@ -117,7 +117,7 @@ export default {
         shareTitle: '分享主标题',
         shareSubTitle: '分享副标题',
         shareImg: baseShareImg,
-        shareLink: baseShareLink,
+        shareLink: `${h5Domain}/act/m/${baseShareLink}&source=act`,
       },
     }
   },
